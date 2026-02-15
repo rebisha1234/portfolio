@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Portfolio Management</title>
+    <link rel="stylesheet" href="admin-styles.css">
+</head>
+<body>
+    <div class="admin-container">
+        <header class="admin-header">
+            <h1>Portfolio Admin Panel</h1>
+            <a href="index.html" class="btn-back">View Website</a>
+        </header>
+
+        <div class="admin-content">
+            <div class="tabs">
+                <button class="tab-btn active" onclick="showTab('profile', this)">Manage Profile</button>
+                <button class="tab-btn" onclick="showTab('gallery', this)">Manage Gallery</button>
+                <button class="tab-btn" onclick="showTab('accomplishments', this)">Manage Accomplishments</button>
+            </div>
+
+            <!-- Profile Management -->
+            <div id="profile-tab" class="tab-content active">
+                <h2>Profile Information</h2>
+                
+                <div class="add-section">
+                    <h3>Update Your Profile</h3>
+                    <form id="updateProfileForm">
+                        <input type="text" id="profileName" placeholder="Your Name" required>
+                        <input type="text" id="profileTitle" placeholder="Title/Degree" required>
+                        <input type="text" id="profileSubtitle" placeholder="Subtitle/Description" required>
+                        <label for="profilePhotoFile" style="font-weight: bold; margin-top: 0.5rem;">Upload Profile Photo:</label>
+                        <input type="file" id="profilePhotoFile" accept="image/*" style="padding: 0.5rem;" required>
+                        <button type="submit" class="btn-primary">Update Profile</button>
+                    </form>
+                </div>
+
+                <div class="profile-preview" id="profilePreview"></div>
+            </div>
+
+            <!-- Gallery Management -->
+            <div id="gallery-tab" class="tab-content">
+                <h2>Gallery Images</h2>
+                
+                <div class="add-section">
+                    <h3>Add New Image</h3>
+                    <form id="addGalleryForm">
+                        <label for="galleryImageFile" style="font-weight: bold; margin-top: 0.5rem;">Upload Image:</label>
+                        <input type="file" id="galleryImageFile" accept="image/*" style="padding: 0.5rem;" required>
+                        <input type="text" id="galleryCaption" placeholder="Caption" required>
+                        <button type="submit" class="btn-primary">Add Image</button>
+                    </form>
+                </div>
+
+                <div class="items-list" id="galleryList"></div>
+            </div>
+
+            <!-- Accomplishments Management -->
+            <div id="accomplishments-tab" class="tab-content">
+                <h2>Accomplishments</h2>
+                
+                <div class="add-section">
+                    <h3>Add New Accomplishment</h3>
+                    <form id="addAccomplishmentForm">
+                        <input type="text" id="accomplishmentTitle" placeholder="Title" required>
+                        <textarea id="accomplishmentDescription" placeholder="Description" rows="4" required></textarea>
+                        <label for="accomplishmentImageFile" style="font-weight: bold; margin-top: 0.5rem;">Upload Image (optional):</label>
+                        <input type="file" id="accomplishmentImageFile" accept="image/*" style="padding: 0.5rem;">
+                        <input type="date" id="accomplishmentDate" required>
+                        <button type="submit" class="btn-primary">Add Accomplishment</button>
+                    </form>
+                </div>
+
+                <div class="items-list" id="accomplishmentsList"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
