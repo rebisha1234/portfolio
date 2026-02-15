@@ -57,7 +57,7 @@ function getDefaultProfile() {
         name: 'Rebisha Rana',
         title: 'Bachelor in Technical Education and Information Technology',
         subtitle: 'Teaching Internship at Xavier College',
-        photo: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop'
+        photo: 'me.jpg'
     };
 }
 

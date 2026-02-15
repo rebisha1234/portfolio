@@ -2,9 +2,25 @@
 
 A portfolio website showcasing the teaching internship experience at Xavier College.
 
+## Setup Instructions
+
+1. **Add Your Profile Photo:**
+   - Place your photo named `me.jpg` in the main folder (same folder as index.html)
+   - The photo will automatically appear on the home page
+
+2. **Open the Website:**
+   - Open `index.html` in your web browser
+   - Navigate through the pages using the menu
+
+3. **Manage Content:**
+   - Open `admin.html` to add/edit/delete content
+   - Upload your teaching photos to the gallery
+   - Add your accomplishments with descriptions
+
 ## Features
 
 - Multi-page responsive website
+- Dynamic profile section with typewriter effect
 - Image gallery of teaching moments
 - Accomplishments section with photos
 - Admin panel for content management (no authentication required)
@@ -12,27 +28,20 @@ A portfolio website showcasing the teaching internship experience at Xavier Coll
 
 ## Pages
 
-1. **Home** - Welcome page with overview
+1. **Home** - Dynamic profile with typewriter effect
 2. **About** - Personal and educational information
 3. **Gallery** - Photos from teaching internship
 4. **Accomplishments** - Achievements with descriptions
 5. **Contact** - Contact information
-6. **Admin Panel** - Manage gallery images and accomplishments
+6. **Admin Panel** - Manage all content
 
-## Admin Panel
+## Deploying to GitHub Pages
 
-Access the admin panel at `admin.html` to:
-- Add/edit/delete gallery images
-- Add/edit/delete accomplishments
-- No authentication required (as requested)
-
-## How to Use
-
-1. Open `index.html` in a web browser
-2. Navigate through the pages using the menu
-3. To manage content, open `admin.html`
-4. Add image URLs and content through the admin interface
-5. Changes are saved in browser localStorage
+1. Create a new repository on GitHub
+2. Upload all files to the repository (including `me.jpg` in the main folder)
+3. Go to Settings > Pages
+5. Select the main branch as source
+6. Your site will be live at `https://yourusername.github.io/repository-name`
 
 ## Technologies Used
 
@@ -41,10 +50,7 @@ Access the admin panel at `admin.html` to:
 - JavaScript (Vanilla)
 - LocalStorage for data persistence
 
-## Setup
-
-Simply open `index.html` in any modern web browser. No server or installation required!
-
 ## Note
 
-The website uses localStorage to save data. Data persists in the browser but won't sync across devices.
+The website uses localStorage to save data. Data persists in the browser but won't sync across devices. When deployed to GitHub Pages, each visitor will have their own localStorage, so the admin panel is only for your local management.
+
